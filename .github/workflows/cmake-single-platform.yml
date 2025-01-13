@@ -22,7 +22,7 @@ jobs:
         cd vcpkg
         .\bootstrap-vcpkg.bat
         $vcpkg_root = $(Get-Location).Path
-        echo "VCPKG_ROOT=$vcpkg" | Out-File -FilePath $env:GITHUB_ENV -Append
+        echo "VCPKG_ROOT=$vcpkg_root" | Out-File -FilePath $env:GITHUB_ENV -Append
         echo "$vcpkg_root" | Out-File -FilePath $env:GITHUB_PATH -Append
       shell: pwsh
 
