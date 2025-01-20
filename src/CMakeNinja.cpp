@@ -1,7 +1,4 @@
-﻿// CMakeNinja.cpp : définit le point d'entrée de l'application.
-//
-
-#include "../include/CMakeNinja.h"
+﻿#include "../include/CMakeNinja.h"
 
 int main()
 {
