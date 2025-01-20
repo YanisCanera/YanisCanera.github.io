@@ -44,13 +44,11 @@ jobs:
     - name: Build
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
-    - name: Run
-      working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
-      run: |
-        start /b .\CMakeNinja.exe
-        timeout /t 5
-        taskkill /f /im CMakeNinja.exe
+    - name: Run 
+      working-directory: ${{github.workspace}}/build/CMake_Ninja/${{env.BUILD_TYPE}} 
+      run: | 
+         start /b .\CMakeNinja.exe 
+         timeout /t 5 
+         taskkill /f /im CMakeNinja.exe 
       shell: cmd
-      
-    
-      
+
