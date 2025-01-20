@@ -46,7 +46,7 @@ jobs:
 
 
     - name: Run
-      working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
+      working-directory: ${{github.workspace}}--/build/${{env.BUILD_TYPE}}
       run: |
         start /b .\CMakeNinja.exe
         timeout /t 5
